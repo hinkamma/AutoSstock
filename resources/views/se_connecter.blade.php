@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>connexion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset('bootstrap-icons/font/bootstrap-icons.min.css')">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body style="background: rgba(198, 251, 255, 0.308)">
+     <div class="container-fluid   d-flex justify-content-center align-items-center vh-100">
+        <div class="card " style="width: 18rem;">
+            <form action="" method="post">
+            
+                <div class="card-body " data-aos="flip-left" data-duration="5000" data-aos-delay="200" data-aos-easing="ease-in-out">
+    
+                <h5 class="card-title"><span style="color:orangered">Auto</span>Stock</h5>
+                <div>
+                    <p class="fs-5 fw-bold text-center">Bienvenue sur AutoStock</p>
+                    <p class="fs-6 text-center">Veuillez vous connecter pour gérer vos stocks efficacement</p>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
+                    <input type="text" class="form-control" id="nom" aria-describedby="nom" name="email" autocomplete="off"> 
+                </div>
+
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="password" autocomplete="off">
+                <div>
+                    <a class="link-opacity-50-hover" href="{{route('oublier')}}">Mot de passe oublier ?</a>
+                </div>
+
+                <div class="mb-3">
+                   <a href="{{route('dashboard.home')}}" style="width:100%; background:orangered;color:white" class="btn  mt-4">se connecter</a>
+                </div>
+
+                <div class="text-center">
+                    <a  href="{{route('compte')}}" class="btn btn-light ">Recommencer</a>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
