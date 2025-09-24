@@ -4,7 +4,7 @@
 
 @section('content_dashboard')
     <div class="container" style="background:rgba(255, 68, 0, 0.021)">
-        <h1>dashoboard</h1>
+        <h1>Tableau de bord</h1>
 
         <div class="row">
 
@@ -102,6 +102,8 @@
             </div>
         </div>
         <hr>
+
+        
     </div>
 
 @endsection

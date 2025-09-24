@@ -1,0 +1,11 @@
+.btn-sign:hover{
+    background:rgb(2, 31, 29);
+    color:white;
+}
+.btn-sign:focus{
+    background:rgb(2, 31, 29);
+    color:white;
+}
+.btn-sign{
+    transition: 0.5s ease-in-out;
+}

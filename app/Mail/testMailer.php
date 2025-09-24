@@ -9,16 +9,19 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class testMailer extends Mailable
+class TestMailer extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $random;
+    public $userSearch;
+    public function __construct($random,$userSearch)
     {
-        //
+        $this->random=$random;
+        $this->userSearch=$userSearch;
     }
 
     /**
@@ -27,7 +30,7 @@ class testMailer extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Test Mailer',
+            subject: 'Renitialisation de votre mot de passe',
         );
     }
 
@@ -37,7 +40,7 @@ class testMailer extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mailler.notification',
         );
     }
 

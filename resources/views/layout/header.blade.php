@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container">
     <nav class="navbar fixed-top shadow-lg" style='background:white'    >
-        <div class="container-fluid"  >
+        <div class="container"  >
             <a class="navbar-brand  text-bold fw-bold" href="#"><span style="color:orangered">Auto</span>Stock</a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+            <button class="navbar-toggler text-white " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
             </button>
             <div style="background:rgb(2, 31, 29)" class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -27,7 +27,13 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{route("FAQ")}}"  >Centre d'aide</a>
                     </li>
+                    <li class="nav-item">
+                        <a  href="{{route('connecter')}}" class="btn" style="background: orangered;color:beige" >se connecter</a>  
+                    </li>
                     </ul>
+                </div>
+                <div class="col-md-12 mb-2">
+                    
                 </div>
             </div>
         </div>

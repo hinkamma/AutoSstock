@@ -13,8 +13,11 @@
 <body style="background: rgba(198, 251, 255, 0.308)">
      <div class="container-fluid   d-flex justify-content-center align-items-center vh-100">
         <div class="card " style="width: 18rem;" data-aos="fade-in" data-duration="5000" data-aos-delay="200" data-aos-easing="ease-in-out">
-            <form action="" method="post">
-            
+            @if($errors->has('stop'))
+                <div class="alert alert-danger">{{$errors->first("stop")}}</div>
+            @endif
+            <form action="{{route('traitment_Entry_Email')}}" method="post">
+                @csrf
                 <div class="card-body ">
     
                 <h5 class="card-title"><span style="color:orangered">Auto</span>Stock</h5>
@@ -26,6 +29,9 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
                     <input type="text" class="form-control" id="nom" aria-describedby="nom" name="email" autocomplete="off"> 
+                    @error("email")
+                        <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                    @enderror
                 </div>
 
                

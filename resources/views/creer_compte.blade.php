@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="asset('bootstrap-icons/font/bootstrap-icons.min.css')">
+    <link rel="stylesheet" href="{{asset('styles/retouchCss.css')}}">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body style="background: rgba(198, 251, 255, 0.308)">
@@ -42,38 +43,49 @@
                         <h6 class="text-center">Essaie gratuit et illimité. pas besoin de carte de credit necessaire. Aucun engagement.</h6>
                     </div>
 
-                    <form action="" data-aos="fade-up" data-duration="3000">
+                    <form method="POST" action="{{route('traitment_Sign')}}" action="" data-aos="fade-up" data-duration="3000">
+                        @csrf
                         <div class="mb-3 container">
                             <label for="prenom" class="form-label fw-bold">Votre Prenom</label>
-                            <input type="text" class="form-control" id="prenom" aria-describedby="nom" name="prenom"  autocomplete="off"> 
-                            {{-- <div style="color:red" id="prenom" class="form-text">backflash</div>     --}}
+                            <input value='{{old('prenom')}}' type="text" class="form-control" id="prenom" aria-describedby="nom" name="prenom"  autocomplete="off"> 
+                            @error("prenom")
+                                <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="mb-3 container">
                             <label for="nom" class="form-label fw-bold">Votre Nom</label>
-                            <input type="text" class="form-control" id="nom" aria-describedby="nom" name="nom" autocomplete="off"> 
-                            {{-- <div style="color:red" id="nom" class="form-text">backflash</div>     --}}
+                            <input value='{{old('nom')}}' type="text" class="form-control" id="nom" aria-describedby="nom" name="nom" autocomplete="off"> 
+                            @error("nom")
+                                <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="mb-3 container">
                             <label for="nom_entreprise" class="form-label fw-bold">Nom de l'entreprise</label>
-                            <input type="text" class="form-control" id="nom_entreprise" aria-describedby="nom" name="nom_entreprise" autocomplete="off"> 
-                            {{-- <div style="color:red" id="nom_entreprise" class="form-text">backflash</div>     --}}
+                            <input value='{{old('company')}}' type="text" class="form-control" id="nom_entreprise" aria-describedby="nom" name="company" autocomplete="off"> 
+                            @error("company")
+                                <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="mb-3 container" >
                             <label for="email" class="form-label fw-bold">Votre e-mail</label>
-                            <input type="text" class="form-control" id="email" aria-describedby="nom" name="email" autocomplete="off"> 
-                            {{-- <div style="color:red" id="email" class="form-text">backflash</div>     --}}
+                            <input value="{{old('email')}}" type="text" class="form-control" id="email" aria-describedby="nom" name="email" autocomplete="off"> 
+                            @error("email")
+                                <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="mb-3 container" >
                             <label for="email" class="form-label fw-bold">Votre Mot de passe</label>
-                            <input type="text" class="form-control" id="email" aria-describedby="nom" name="em" autocomplete="off"> 
-                            {{-- <div style="color:red" id="email" class="form-text">backflash</div>     --}}
+                            <input value="{{old('password')}}" type="text" class="form-control" id="email" aria-describedby="nom" name="password" autocomplete="off"> 
+                            @error("password")
+                                <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="mb-3 container">
-                            <button class="btn mt-4" style="border:2px solid orangered;width:100%">se connecter</button>
+                            <button class="btn mt-4 btn-sign" style="border:2px solid rgb(2, 31, 29);;width:100%">S'inscrire</button>
                         </div>
                         <div class="container d-flex justify-content-center">
                             <a href="{{route("connecter")}}" class="text-decoration-none">J'ai deja un compte</a>

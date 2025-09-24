@@ -44,44 +44,42 @@
     <div class="container-fluid mt-5 p-5" style="background:rgb(7, 27, 29);color:white">
         <p class="fs-3 text-center">AVANTAGES</p>
         <div class="container mt-2 justify-content-center" >
-           <div class="container ">
-                 <div class="row  ">
-                    <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center" data-aos="fade-up-left" data-aos-duration="1000"> 
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center"><div style="width:90px;height:90px"><img src="{{asset("icons/1304119.png")}}" width="100%" height="100%" alt=""></div></div>
-                                <h5 class="card-title text-center">Optimiser vos stocks</h5>
-                                <h6 class="text-center">Evite les rupture de stock</h6>
-                                <h6 class="text-center">Réduit les surstockage</h6>
-                                
-                            </div>
+            <div class="row  ">
+                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center" data-aos="zoom-in" data-aos-duration="1000"> 
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px"><img src="{{asset("icons/1304119.png")}}" width="100%" height="100%" alt=""></div></div>
+                            <h5 class="card-title text-center">Optimiser vos stocks</h5>
+                            <h6 class="text-center">Evite les rupture de stock</h6>
+                            <h6 class="text-center">Réduit les surstockage</h6>
+                            
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="fade-up-right" data-aos-duration="1000"> 
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" height="100%" width="100%" alt=""></div></div>
-                                <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>
-                                <h6 class="text-center">suivi en temps des niveau de stock</h6>
-                                <h6 class="text-center">alerte pour reapprovisionnement automatique</h6>
-                                
-                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" height="100%" width="100%" alt=""></div></div>
+                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>
+                            <h6 class="text-center">suivi en temps des niveau de stock</h6>
+                            <h6 class="text-center">alerte pour reapprovisionnement automatique</h6>
+                            
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mt-2" data-aos="fade-up-left" data-aos-duration="1000"> 
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/time.png')}}" height="100%" width="100%" alt=""></div></div>
-                                <h5 class="card-title text-center">Gain de temps & efficacité</h5>
-                                <h6 class="text-center">Reduction des erreur liées a la saisie</h6>
-                                <h6 class="text-center">Mise a jour en temps reel </h6>
-                                
-                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/time.png')}}" height="100%" width="100%" alt=""></div></div>
+                            <h5 class="card-title text-center">Gain de temps & efficacité</h5>
+                            <h6 class="text-center">Reduction des erreur liées a la saisie</h6>
+                            <h6 class="text-center">Mise a jour en temps reel </h6>
+                            
                         </div>
                     </div>
+                </div>
 
             </div>
-           </div>
         </div>
     </div>
 
@@ -90,14 +88,15 @@
             <div class="col-md-12 col-sm-6 d-flex justify-content-center align-items-center"> 
                 <div class="card m-3" style="width: 18rem;">
                     <div class="card-body ">
-                        <div class="d-flex justify-content-center"><div style="width:200px;height:200px;"><img src="{{asset("icons/temoignage.png")}}" height="100%" width="100%" alt=""></div></div>
-                            <h3 class="card-title text-center text-success blockquote">Freddy rol</h3>
+                        <div class="d-flex justify-content-center"><div style="width:200px;height:200px;"><div class="rounded" style='height:100%;width:100%;background-position:center;background-size:cover;background-image:url("{{asset('icons/users.jpg')}}")'></div></div></div>
+                            <h3 class="card-title text-center text-success blockquote fs-6 mt-1">freddy roland Hinkamma</h3>
                         </div>
+                        <em class="ms-auto p-2">Un utilisateur</em>
                     </div>
                 </div>    
             </div>
             <div class="container">
-                <p class="fs-5 fw-light text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod commodi iusto sed aut, tempore, fugit non sequi magnam accusantium, corporis facilis ut. Consequatur eius inventore animi quam molestias, consectetur culpa!</p>    
+                <p class="fs-6 fw-light text-center fst-italic">"Avant, notre gestion de stock était un vrai casse-tête : des inventaires manuels interminables, des ruptures de stock imprévues qui nous coûtaient cher, et des erreurs de saisie qui nous faisaient perdre des heures. Depuis que j'utilise cette application, tout a changé ! L'interface est intuitive, les alertes en temps réel m'avertissent dès qu'un produit approche de la rupture, et les rapports automatisés me permettent de suivre les ventes et les commandes en un clin d'œil. On a réduit nos pertes de 30% et gagné un temps fou pour se concentrer sur le développement de l'entreprise. Franchement, c'est l'outil indispensable pour toute équipe qui veut être efficace sans complications. Je le recommande à 100% !"</p>    
             </div>
         </div>
         
