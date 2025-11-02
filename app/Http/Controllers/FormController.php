@@ -40,23 +40,19 @@ class FormController extends Controller
     function view_Login(){
         return view("se_connecter");
     }
+    
     function traitment_Login(Request $request){
-        $tabRequest=$request->validate([
-            'email'=>['required','string','email'],
-            'password'=>["required"]
+        $tabRequest = $request->validate([
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required']
         ]);
 
-        $user=Utilisateur::where("email",$request->email)->first();
-        if($user && Hash::check($request->password,$user->password)){
-            //on regenere l'id de session qui lavit ete attribuer au moment de la creation
+        if (Auth::attempt($tabRequest)) {
             $request->session()->regenerate();
-            if(Auth::attempt($tabRequest)){
-                return redirect()->intended('/dashboard/home');
-            }
-        }else{
-            return redirect()->back()->withErrors(["stop"=>"identifiant(s) incorrect(s)"]);
+            return redirect()->intended('/dashboard/home');
+        } else {
+            return redirect()->back()->withErrors(["stop" => "identifiant(s) incorrect(s)"]);
         }
-
     }
 
     // cette fonction permet de deconneter un utilisateur
@@ -132,5 +128,13 @@ class FormController extends Controller
     } 
 
 }
+//             Auth::login($user);
+//             return redirect()->intended('dashboard/home');
+//         }else{
+//             dd('error');
+//         }
+//     } 
+
+// }
 
 

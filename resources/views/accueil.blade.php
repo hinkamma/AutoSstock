@@ -8,12 +8,21 @@
             <div class="col-md-5">
                 <div class="container">
                     <div class="container" data-aos="zoom-in-up" data-aos-duration="1500">
-                        <h1 class="fs-1">Enfin une application pour piloter vos stocks en temps réel !</h1>
-                        <p class="fs-6 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nihil maxime laboriosam, asperiores quod dolor nostrum delectus vitae voluptatem consequuntur rerum adipisci dolorum dolorem consectetur maiores facere perferendis beatae eaque!</p>
+                        <h1 class="fs-1 ">Enfin une application pour piloter vos stocks en temps réel !</h1>
+                        <p class="fs-6 mt-4">
+                            <div class="row">
+                                <div class="col-md-12"><i class="bi bi-check-circle-fill text-success"></i> Suivi de l'inventaire en temps réel;</div>
+                                <div class="col-md-12"><i class="bi bi-check-circle-fill text-success"></i> Alertes de stock faible et ruptures;</div>
+                                <div class="col-md-12"><i class="bi bi-check-circle-fill text-success"></i> Gestion multi-entrepôts;</div>
+                                <div class="col-md-12"><i class="bi bi-check-circle-fill text-success"></i> Rapports et analyses automatisés</div>
+                                <div class="col-md-12"><i class="bi bi-check-circle-fill text-success"></i> Intégration des ventes et des achats;</div>
+                            </div>
+                                            
+                        </p>
 
                         <p class="mt-4">
                             <div class="d-grid gap-2 col-12 mx-auto">
-                                <a href="{{route('compte')}}" class="btn " style="background:orangered;color:white" type="button"><i class="bi bi-airplane-engines"></i> Essaie gratuit</a>
+                                <a href="{{route('compte')}}" class="btn " style="background:orangered;color:white" type="button"><i class="bi bi-airplane-engines"></i> ESSAI GRATUIT-14 JOURS</a>
                             </div>
                         </p>
                     </div>
@@ -52,15 +61,15 @@
                             <h5 class="card-title text-center">Optimiser vos stocks</h5>
                             <h6 class="text-center">Evite les rupture de stock</h6>
                             <h6 class="text-center">Réduit les surstockage</h6>
-                            
-                        </div>
-                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" height="100%" width="100%" alt=""></div></div>
                             <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>
+                            
+                        </div>
+                    </div>
                             <h6 class="text-center">suivi en temps des niveau de stock</h6>
                             <h6 class="text-center">alerte pour reapprovisionnement automatique</h6>
                             
@@ -117,7 +126,7 @@
                             <div style="width:90px;height:90px"><img src="{{asset('icons/5166970.png')}}" height="100%" width="100%" alt=""></div>
                         </div>
                         <h5 class="card-title text-center">Etat des stocks</h5>
-                        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt nam dolor, cum, tenetur neque placeat sequi dolores ad similique asperiores veniam quasi est optio repellendus enim. Ipsam, illum optio.</p> 
+                        <p class="text-center">Vision claire de votre inventaire : niveaux en temps réel, alertes automatiques, optimisation des commandes. Contrôlez vos stocks depuis n'importe où..</p> 
                     </div>
                 </div>
             </div>
@@ -128,7 +137,8 @@
                             <div style="width:90px;height:90px;"><img src="{{asset('icons/1622703.png')}}" height="100%" width="100%" alt=""></div>
                         </div>
                         <h5 class="card-title text-center">Achats Produits</h5>
-                        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non odio dignissimos corrupti deserunt labore quasi sequi voluptatibus nulla, excepturi impedit? Quae necessitatibus sequi amet, sint assumenda laborum ipsam illo iste!</p>  
+                        <p class="text-center"> 
+                            Simplifiez vos approvisionnements avec notre module d'achats intelligent. Créez des bons de commande en un clic, suivez l'état de vos livraisons en temps réel et bénéficiez de recommandations automatiques basées sur vos seuils de sécurité. </p>  
                     </div>
                 </div>
             </div>
@@ -139,7 +149,7 @@
                             <div style="width:90px;height:90px;"><img src="{{asset('icons/2649220.png')}}" height="100%" width="100%" alt=""></div>
                         </div>
                         <h5 class="card-title text-center">Vente Produits</h5>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique enim aliquam facere sed eius fugiat dicta non ipsa! Officia esse impedit deserunt praesentium pariatur earum vero sapiente veniam cumque est?</p>    
+                        <p class="text-center"> Accélérez vos ventes avec notre module point de vente intégré. Gérez vos commandes clients en temps réel, suivez vos encaissements et synchronisez instantanément vos stocks.</p>    
                     </div>
                 </div>
             </div>
@@ -150,7 +160,9 @@
                             <div style="width:90px;height:90px;"><img src="{{asset('icons/multi.jpg')}}" height="100%" width="100%" alt=""></div>
                         </div>
                         <h5 class="card-title text-center">Multi Entrepôts</h5>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique enim aliquam facere sed eius fugiat dicta non ipsa! Officia esse impedit deserunt praesentium pariatur earum vero sapiente veniam cumque est?</p>    
+                        <p class="text-center">
+                                Avec notre système, fini les inventaires manuels longs et fastidieux. Visualisez et contrôlez vos stocks en direct, à chaque étape, de l'entrepôt au client. Anticipez les ruptures, optimisez vos approvisionnements et prenez des décisions rapides et éclairées pour maximiser votre efficacité
+                        </p>    
                     </div>
                 </div>
             </div>
@@ -229,7 +241,7 @@
         </div> 
        </div>
         <p class="fs-2 text-center mt-4" style="color:whitesmoke">Gérer vos stocks en temps réel </p>
-        <p class="fs-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid accusantium debitis maiores hic nulla labore tempore eaque corporis. Fugiat molestias ducimus adipisci. Et modi ea necessitatibus doloribus ratione ipsum placeat!</p>
+        <p class="fs-5">Avec notre système, fini les inventaires manuels longs et fastidieux. Visualisez et contrôlez vos stocks en direct, à chaque étape, de l'entrepôt au client. Anticipez les ruptures, optimisez vos approvisionnements et prenez des décisions rapides et éclairées pour maximiser votre efficacité</p>
         <div class="col-md-3">
             <p class="mt-4 justify-content-center">
                 <div class="d-grid gap-2 col-12 mx-auto d-flex " >
