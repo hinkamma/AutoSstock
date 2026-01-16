@@ -18,20 +18,22 @@ class FormController extends Controller
     }
     function traitment_Sign(Request $request){
         $request->validate([
-            'nom'=>['required','string'],
+            'nom'=>['required','string'],   
             'prenom'=>['required','string'],
             'company'=>['required','string'],
             'email'=>['required','string','email','unique:utilisateurs','required'],
             'password'=>['required','string','regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};\':"\\|,.<>\/?]).+$/']
         ]);
-        $user=Utilisateur::create([
+
+        $data=Utilisateur::create([
             'nom'=>$request->nom,
             'prenom'=>$request->prenom,
             'company'=>$request->company,
             'email'=>$request->email,
-            'password'=>$request->password
+            'password'=>Hash::make($request->password)
         ]);
-        Auth::login($user);
+        Auth::login($data);
+        $request->session()->regenerate();
         return redirect()->intended('/dashboard/home');
     }
 
@@ -46,12 +48,15 @@ class FormController extends Controller
             'email' => ['required', 'string', 'email'],
             'password' => ['required']
         ]);
-
-        if (Auth::attempt($tabRequest)) {
+        
+        $user = Utilisateur::where('email',$request->email)->first();
+        if ($user && Hash::check($request->password, $user->password)) {
+            Auth::login($user);
             $request->session()->regenerate();
             return redirect()->intended('/dashboard/home');
-        } else {
-            return redirect()->back()->withErrors(["stop" => "identifiant(s) incorrect(s)"]);
+            dd(Auth::check());
+        }else{
+            return redirect()->back()->withErrors(["stop" => "identifiants incorrects"]);
         }
     }
 
@@ -61,7 +66,8 @@ class FormController extends Controller
     }
     function traitment_Disconet(Request $request ){
         Auth::logout();
-        $request->session()->flush();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect()->route('connecter');
     }
 

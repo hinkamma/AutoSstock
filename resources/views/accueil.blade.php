@@ -53,39 +53,46 @@
     <div class="container-fluid mt-5 p-5" style="background:rgb(7, 27, 29);color:white">
         <p class="fs-3 text-center">AVANTAGES</p>
         <div class="container mt-2 justify-content-center" >
-            <div class="row  ">
-                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center" data-aos="zoom-in" data-aos-duration="1000"> 
+            <div class="row ">
+
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px"><img src="{{asset("icons/1304119.png")}}" width="100%" height="100%" alt=""></div></div>
-                            <h5 class="card-title text-center">Optimiser vos stocks</h5>
-                            <h6 class="text-center">Evite les rupture de stock</h6>
-                            <h6 class="text-center">Réduit les surstockage</h6>
+                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px"><img src='{{asset("icons/1304119.png")}}' width="100%" height="100%" alt=""></div></div>
+                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>         
+                        </div>
+                        <div class="card-footer" >
+                            <p class="text-center fs-6 m-0">Evite les ruptures de stock</p>
+                            <p class="text-center fs-6 m-0">Réduit les surstockage</p>
+                        </div>
+                    </div>           
                 </div>
-                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
+
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" height="100%" width="100%" alt=""></div></div>
-                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>
-                            
+                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>         
                         </div>
-                    </div>
-                            <h6 class="text-center">suivi en temps des niveau de stock</h6>
-                            <h6 class="text-center">alerte pour reapprovisionnement automatique</h6>
-                            
+                        <div class="card-footer">
+                            <p class="text-center fs-6 m-0">suivi en temps des niveau de stock</p>
+                            <p class="text-center fs-6 m-0">alerte pour reapprovisionnement automatique</p>
                         </div>
-                    </div>
+                    </div>           
                 </div>
-                <div class="col-md-4 col-sm-6 d-flex justify-content-center align-items-center mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
+                
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/time.png')}}" height="100%" width="100%" alt=""></div></div>
-                            <h5 class="card-title text-center">Gain de temps & efficacité</h5>
-                            <h6 class="text-center">Reduction des erreur liées a la saisie</h6>
-                            <h6 class="text-center">Mise a jour en temps reel </h6>
-                            
+                           <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/time.png')}}" height="100%" width="100%" alt=""></div></div>
+                            <h5 class="card-title text-center m-0">Gain de temps & efficacité</h5>
+                            <h5 class="card-title text-center m-0">Meilleure visibilité & suivi</h5>         
                         </div>
-                    </div>
+                        <div class="card-footer">
+                            <p class="text-center fs-6 m-0">Reduction des erreur liées a la saisie</p>
+                            <p class="text-center fs-6">Mise a jour en temps reel</p>
+                        </div>
+                    </div>           
                 </div>
 
             </div>

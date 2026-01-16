@@ -47,7 +47,7 @@
                         @csrf
                         <div class="mb-3 container">
                             <label for="prenom" class="form-label fw-bold">Votre Prenom</label>
-                            <input value='{{old('prenom')}}' type="text" class="form-control" id="prenom" aria-describedby="nom" name="prenom"  autocomplete="off"> 
+                            <input value="{{old('prenom')}}" type="text" class="form-control" id="prenom" aria-describedby="nom" name="prenom"  autocomplete="off"> 
                             @error("prenom")
                                 <div style="color:red" id="prenom" class="form-text">{{$message}}</div>
                             @enderror
@@ -87,8 +87,8 @@
                         <div class="mb-3 container">
                             <button class="btn mt-4 btn-sign" style="border:2px solid rgb(2, 31, 29);;width:100%">S'inscrire</button>
                         </div>
-                        <div class="container d-flex justify-content-center">
-                            <a href="{{route("connecter")}}" class="text-decoration-none">J'ai deja un compte</a>
+                        <div class="container d-flex justify-content-center m-0">
+                            <a href="{{route('connecter')}}" class="text-decoration-none">J'ai deja un compte</a>
                         </div>
 
                         

@@ -11,7 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->redirectGuestsTo('/connexion');
+        $middleware->alias(
+            ["obligation_connexion" => \App\Http\Middleware\Security::class,]
+        );
+        // $middleware->redirectGuestsTo('/connexion');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
