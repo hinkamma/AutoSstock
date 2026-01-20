@@ -51,48 +51,54 @@
     </div>
 
     <div class="container-fluid mt-5 p-5" style="background:rgb(7, 27, 29);color:white">
-        <p class="fs-3 text-center">AVANTAGES</p>
-        <div class="container mt-2 justify-content-center" >
-            <div class="row ">
+        <div class="container">
+            <p class="fs-3 text-center mb-4">Les avantages que nous vous proposons</p>
 
-                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px"><img src='{{asset("icons/1304119.png")}}' width="100%" height="100%" alt=""></div></div>
-                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>         
+            <div class="row g-3 justify-content-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="800">
+                    <div class="card h-100 bg-transparent border-0 text-white">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-4" style="background: rgba(255,255,255,0.02); border-radius:12px;">
+                            <div class="icon mb-3" style="width:96px;height:96px;border-radius:12px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;">
+                                <img src='{{asset("icons/1304119.png")}}' width="64" height="64" alt="" style="opacity:0.95">
+                            </div>
+                            <h5 class="card-title fw-bold">Meilleure visibilité & suivi</h5>
+                            <ul class="list-unstyled mt-3 small mb-0 text-white-50">
+                                <li>Évite les ruptures de stock</li>
+                                <li>Réduit les surstockages</li>
+                            </ul>
                         </div>
-                        <div class="card-footer" >
-                            <p class="text-center fs-6 m-0">Evite les ruptures de stock</p>
-                            <p class="text-center fs-6 m-0">Réduit les surstockage</p>
-                        </div>
-                    </div>           
+                    </div>
                 </div>
 
-                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" height="100%" width="100%" alt=""></div></div>
-                            <h5 class="card-title text-center">Meilleure visibilité & suivi</h5>         
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="900">
+                    <div class="card h-100 bg-transparent border-0 text-white">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-4" style="background: rgba(255,255,255,0.02); border-radius:12px;">
+                            <div class="icon mb-3" style="width:96px;height:96px;border-radius:12px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;">
+                                <img src="{{asset('icons/pngtree-warehouse-workers-check-the-inventory-levels-of-items-on-the-shelves-png-image_15622835.png')}}" width="64" height="64" alt="" style="opacity:0.95">
+                            </div>
+                            <h5 class="card-title fw-bold">Suivi temps réel & alertes</h5>
+                            <ul class="list-unstyled mt-3 small mb-0 text-white-50">
+                                <li>Suivi des niveaux de stock en temps réel</li>
+                                <li>Alertes pour réapprovisionnement automatique</li>
+                            </ul>
                         </div>
-                        <div class="card-footer">
-                            <p class="text-center fs-6 m-0">suivi en temps des niveau de stock</p>
-                            <p class="text-center fs-6 m-0">alerte pour reapprovisionnement automatique</p>
-                        </div>
-                    </div>           
+                    </div>
                 </div>
-                
-                <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center mb-sm-2 mt-2" data-aos="zoom-in" data-aos-duration="1000"> 
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                           <div class="d-flex justify-content-center"><div style="width:90px;height:90px;"><img src="{{asset('icons/time.png')}}" height="100%" width="100%" alt=""></div></div>
-                            <h5 class="card-title text-center m-0">Gain de temps & efficacité</h5>
-                            <h5 class="card-title text-center m-0">Meilleure visibilité & suivi</h5>         
+
+                <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card h-100 bg-transparent border-0 text-white">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-4" style="background: rgba(255,255,255,0.02); border-radius:12px;">
+                            <div class="icon mb-3" style="width:96px;height:96px;border-radius:12px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;">
+                                <img src="{{asset('icons/time.png')}}" width="64" height="64" alt="" style="opacity:0.95">
+                            </div>
+                            <h5 class="card-title fw-bold">Gain de temps & efficacité</h5>
+                            <ul class="list-unstyled mt-3 small mb-0 text-white-50">
+                                <li>Réduction des erreurs de saisie</li>
+                                <li>Mise à jour en temps réel</li>
+                            </ul>
                         </div>
-                        <div class="card-footer">
-                            <p class="text-center fs-6 m-0">Reduction des erreur liées a la saisie</p>
-                            <p class="text-center fs-6">Mise a jour en temps reel</p>
-                        </div>
-                    </div>           
+                    </div>
                 </div>
 
             </div>
@@ -101,21 +107,31 @@
 
     <div class="container-fluid p-5" style="background: linear-gradient(10deg,rgba(200, 250, 246, 0.753),rgb(209, 248, 228));" data-aos="zoom-in-right" data-aos-duration="500">
         <div class="container">
-            <div class="col-md-12 col-sm-6 d-flex justify-content-center align-items-center"> 
-                <div class="card m-3" style="width: 18rem;">
-                    <div class="card-body ">
-                        <div class="d-flex justify-content-center"><div style="width:200px;height:200px;"><div class="rounded" style='height:100%;width:100%;background-position:center;background-size:cover;background-image:url("{{asset('icons/users.jpg')}}")'></div></div></div>
-                            <h3 class="card-title text-center text-success blockquote fs-6 mt-1">freddy roland Hinkamma</h3>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-4 col-md-5">
+                    <div class="card shadow-sm" style="border-radius:12px;overflow:hidden;">
+                        <div class="row g-0">
+                            <div class="col-4 d-none d-md-block" style="background-image:url('{{asset('icons/users.jpg')}}');background-size:cover;background-position:center;min-height:160px"></div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success mb-1">freddy roland Hinkamma</h5>
+                                    <p class="mb-1 small text-muted">Un utilisateur</p>
+                                    <p class="small text-muted mt-2 mb-0">Membre depuis 2024</p>
+                                </div>
+                            </div>
                         </div>
-                        <em class="ms-auto p-2">Un utilisateur</em>
                     </div>
-                </div>    
-            </div>
-            <div class="container">
-                <p class="fs-6 fw-light text-center fst-italic">"Avant, notre gestion de stock était un vrai casse-tête : des inventaires manuels interminables, des ruptures de stock imprévues qui nous coûtaient cher, et des erreurs de saisie qui nous faisaient perdre des heures. Depuis que j'utilise cette application, tout a changé ! L'interface est intuitive, les alertes en temps réel m'avertissent dès qu'un produit approche de la rupture, et les rapports automatisés me permettent de suivre les ventes et les commandes en un clin d'œil. On a réduit nos pertes de 30% et gagné un temps fou pour se concentrer sur le développement de l'entreprise. Franchement, c'est l'outil indispensable pour toute équipe qui veut être efficace sans complications. Je le recommande à 100% !"</p>    
+                </div>
+
+                <div class="col-lg-8 col-md-7">
+                    <div class="card border-0" style="background:transparent;">
+                        <div class="card-body p-3 p-md-4" style="background:rgba(255,255,255,0.9);border-radius:12px;">
+                            <p class="fs-6 fw-light text-start fst-italic mb-0" style="color:#0b3a34;">"Avant, notre gestion de stock était un vrai casse-tête : des inventaires manuels interminables, des ruptures de stock imprévues qui nous coûtaient cher, et des erreurs de saisie qui nous faisaient perdre des heures. Depuis que j'utilise cette application, tout a changé ! L'interface est intuitive, les alertes en temps réel m'avertissent dès qu'un produit approche de la rupture, et les rapports automatisés me permettent de suivre les ventes et les commandes en un clin d'œil. On a réduit nos pertes de 30% et gagné un temps fou pour se concentrer sur le développement de l'entreprise. Franchement, c'est l'outil indispensable pour toute équipe qui veut être efficace sans complications. Je le recommande à 100% !"</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
 
     <div  id="section_fonctionalite" class="container-fluid p-5" style="background: white" >
@@ -178,67 +194,56 @@
             
     </div>
 
-    <div  id="section_tarif" class="container-fluid p-5" style="background: white;background:rgb(2, 25, 31)" >
-        <p class="text-center fs-2 fw-bold text-light" data-aos="fade-in" data-aos-duration="500">Tarifs</p>
-        
-        <div class="row justify-content-center">
-        
-            <div class="col-md-3 col-sm-6 d-flex justify-content-center align-items-center mt-2" data-aos="fade-up" data-aos-duration="500"> 
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">FORMULE MENSUEL</h4>
-                        <p class="text-center">visualisation du tableau de bord + notifications </p> 
-                        
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center" >
-                                <div class="col-md-12 d-flex justify-content-center">
-                                    <span class="badge bg-danger">Récommandé</span>
-                                </div>
-                                <div class="col-md-12 mt-2">
-                                    <p class="fs-6 text-center"><span class="fw-bold fs-3">36,99 $</span>/an</p>
-                                </div>
-                                <div>
-                                    <p class="text-center">offre gratuite pour le moment </p>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <a href="{{route('compte')}}" class="btn " style="background:orangered;color:rgba(255, 255, 255, 0.897)">Commencer</a>
-                                </div>
-                                
+    <div  id="section_tarif" class="container-fluid p-5" style="background:rgb(2, 25, 31)">
+        <div class="container">
+            <p class="text-center fs-2 fw-bold text-light mb-4" data-aos="fade-in" data-aos-duration="500">Tarifs</p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-8" data-aos="fade-up" data-aos-duration="500">
+                    <div class="card h-100" style="border-radius:10px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">FORMULE MENSUEL</h5>
+                            <p class="text-muted">visualisation du tableau de bord + notifications</p>
+                            <div class="my-3">
+                                <span class="badge bg-danger">Recommandé</span>
+                            </div>
+                            <div class="mb-3">
+                                <p class="fs-5 mb-0"><span class="fw-bold fs-3">36,99 $</span>/an</p>
+                            </div>
+                            <p class="small text-muted">offre gratuite pour le moment</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-0">
+                            <div class="d-grid px-3 pb-3">
+                                <a href="{{route('compte')}}" class="btn btn-primary" style="background:orangered;border:none;">Commencer</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 d-flex justify-content-center align-items-center mt-2" data-aos="fade-up" data-aos-duration="500"> 
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        
-                        <h4 class="card-title text-center">FORMULE ANNUEL</h4>
-                        <p class="text-center">Optimiser pour les pétites et moyens entreprise</p> 
-                        
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center" >
-                                <div class="col-md-12 d-flex justify-content-center">
-                                    <span class="badge bg-danger">Economisez 75%</span>
-                                </div>
-                                <div class="col-md-12 mt-2">
-                                    <p class="fs-6 text-center"><span class="fw-bold fs-3">3,99 $</span>/mois</p>
-                                </div>
-                                <div>
-                                    <p class="text-center">offre gratuite poue le moment </p>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <a href="{{route('compte')}}" class="btn " style="background:orangered;color:rgba(255, 255, 255, 0.897)">Commencer</a>
-                                </div>
-                                
+
+                <div class="col-lg-4 col-md-6 col-sm-8" data-aos="fade-up" data-aos-duration="500">
+                    <div class="card h-100" style="border-radius:10px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">FORMULE ANNUEL</h5>
+                            <p class="text-muted">Optimisée pour petites et moyennes entreprises</p>
+                            <div class="my-3">
+                                <span class="badge bg-danger">Économisez 75%</span>
+                            </div>
+                            <div class="mb-3">
+                                <p class="fs-5 mb-0"><span class="fw-bold fs-3">3,99 $</span>/mois</p>
+                            </div>
+                            <p class="small text-muted">offre gratuite pour le moment</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-0">
+                            <div class="d-grid px-3 pb-3">
+                                <a href="{{route('compte')}}" class="btn btn-primary" style="background:orangered;border:none;">Commencer</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-
-            
     </div>
 
     <div class="container p-5 " style="background:linear-gradient(60deg,rgba(255, 68, 0, 0.541),white);border-radius:5px" data-aos="zoom-in-up" data-aos-duration="1000">
@@ -252,7 +257,7 @@
         <div class="col-md-3">
             <p class="mt-4 justify-content-center">
                 <div class="d-grid gap-2 col-12 mx-auto d-flex " >
-                    <a href="{{route("compte")}}" class="btn " style="background:white;color:orangered" type="button " data-aos="fade-up">Commencer maintenant</a>
+                    <a href='{{route("compte")}}' class="btn " style="background:white;color:orangered" type="button " data-aos="fade-up">Commencer dès maintenant</a>
                 </div>
             </p>
         </div>

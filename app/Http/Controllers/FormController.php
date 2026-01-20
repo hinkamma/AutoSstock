@@ -92,7 +92,7 @@ class FormController extends Controller
             return redirect()->route('view_Validate_Tokens');
 
         }else{
-            return redirect()->back()->withErrors(['stop'=>'identifiant(s) introuvé(s)']);
+            return redirect()->back()->withErrors(['stop'=>'adresse e-mail introuvée']);
         }
     }
 

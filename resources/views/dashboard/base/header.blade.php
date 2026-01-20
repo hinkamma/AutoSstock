@@ -51,12 +51,19 @@
    
 
   {{-- profil --}}
-    
-  <div class="ms-auto mx-4" style="background;width: 30px;height: 30px; "> 
+    {{-- welcome + profil --}}
+    <div class="d-none d-md-flex align-items-center me-3">
+      <div class="px-3 py-1 rounded" style="background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04);">
+        <div class="small text-muted" style="line-height:1">Bienvenue,</div>
+        <div class="fw-bold" style="font-size:0.95rem">freddy roland</div>
+      </div>
+    </div>
+
+    <div class="ms-auto mx-4" style="background;width: 30px;height: 30px; "> 
       <a style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="border-radius:1000px;border:none">
-          <img src="{{asset('banners/admin.jpeg')}}" width="100%" height="100%" alt="" style="border-radius:1000px" title="freddy roland">
+        <img src="{{asset('banners/admin.jpeg')}}" width="100%" height="100%" alt="" style="border-radius:1000px" title="{{ auth()->user()->name ?? 'Profil' }}">
       </a>
-  </div>
+    </div>
 
     
 

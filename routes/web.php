@@ -68,7 +68,7 @@ Route::get('/dashboard/produit', function () {
 })->middleware("obligation_connexion")->name('dashboard.produit');
 Route::get('/dashboard/fournisseur', function () {
     return view('dashboard.fournisseur');
-})->name('dashboard.fournisseur');
+})->middleware("obligation_connexion")->name('dashboard.fournisseur');
 
 
 Route::get('/dashboard/commande', function () {
@@ -144,5 +144,8 @@ Route::get('/dashboard/manager/activite', function () {
 })->middleware("obligation_connexion")->name('dashboard.manager.activite');
 
 
+Route::get('/dashboard/manager/activite', function () {
+    return view('dashboard.manager.activite');
+})->middleware("obligation_connexion")->name('dashboard.manager.activite');
 
 

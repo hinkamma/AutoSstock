@@ -23,7 +23,7 @@
                 <h5 class="card-title"><span style="color:orangered">Auto</span>Stock</h5>
                 <div>
                     <p class="fs-5 fw-bold text-center">Consulter votre boite de reception</p>
-                    <p class="fs-6 text-center">Le systeme vous a transmit un token de validation, veuillez l'entrée dans le champs</p>
+                    <p class="fs-6 text-center">Le systeme vous a transmit un token de validation, veuillez l'entrer dans le champs ci-dessous</p>
                 </div>
 
                 <div class="mb-3">
@@ -34,6 +34,9 @@
                     @enderror
                 </div>
 
+                <div class="mb-1">
+                    <a href=""><i class="bi bi-arrow-counterclockwise"></i> réenvoyer le token</a>
+                </div>
                
 
                 <div class="mb-3">
