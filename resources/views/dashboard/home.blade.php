@@ -16,11 +16,11 @@
 
         <!-- Fixed action buttons: Stocker / Destocker -->
         <div class="fixed-action-buttons" style="position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:1100;display:flex;flex-direction:column;gap:.6rem;">
-            <a href="" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#enregistrer_produit" data-bs-whatever="@mdo" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
                 <i class="bi bi-box-arrow-in-down fs-5" aria-hidden="true"></i>
                 <small style="font-size:10px;line-height:1;margin-top:2px;">Stocker</small>
             </a>
-            <a href="" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+            <a data-bs-toggle="modal" data-bs-target="#retirer_produit" data-bs-whatever="@mdo" href="" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
                 <i class="bi bi-box-arrow-up fs-5" aria-hidden="true"></i>
                 <small style="font-size:10px;line-height:1;margin-top:2px;">Destocker</small>
             </a>
@@ -144,13 +144,8 @@
         <!-- Shortcut buttons -->
         <div class="row mt-3 mb-4">
             <div class="col-md-4 mb-2">
-                <a href="{{ route('dashboard.stock') }}" class="btn btn-outline-primary w-100 py-2">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#raccourcis_stock_vide" data-bs-whatever="@mdo" class="btn btn-outline-primary w-100 py-2">
                     <i class="bi bi-plus-square me-2"></i> Créer un stock vide
-                </a>
-            </div>
-            <div class="col-md-4 mb-2">
-                <a href="{{ route('dashboard.produit') }}" class="btn btn-outline-success w-100 py-2">
-                    <i class="bi bi-box-seam me-2"></i> Ajouter un produit
                 </a>
             </div>
             <div class="col-md-4 mb-2">

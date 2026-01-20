@@ -68,6 +68,8 @@
     
 
 </nav>
+
+<!-- boite de dialogue de la session compte de l'utilisateur -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -121,5 +123,148 @@
         </button>
       </div>
     </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="raccourcis_stock_vide" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header bg-primary">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">stock vide</h1>
+              <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">stock</label>
+                  </div>
+                  
+                  <div class="form-floating mt-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Description</label>
+                  </div>
+                  
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn " data-bs-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-outline-primary "><i class="bi bi-save"></i> Creer</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- raccourcis direct pour stocker un produit -->
+<div class="modal fade" id="enregistrer_produit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header bg-success">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Produit / Article</h1>
+              <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-floating mb-3 ">
+                      <input type="text" value="C83E1" class="form-control cursor-none fw-bold" id="floatingInput" placeholder="name@example.com"  >
+                      <label for="floatingInput"><i class="bi bi-tag"></i> Référence Ref</label>
+                  </div>
+                  <div class="form-floating mb-3 ">
+                      <input type="text"  class="form-control" id="floatingInput" placeholder="name@example.com" >
+                      <label for="floatingInput"><i class="bi bi-box"></i> Article*</label>
+                  </div>
+                  
+
+                  <div class="border border-2" style="padding:10px; border-radius:5px">
+                      <div class="form-floating mt-3">
+                          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="3">Tablette</option>
+                              <option value="">Autres...</option>
+                          </select>
+                          <label for="floatingSelect"><i class="bi bi-boxes"></i> Catégorie*</label>
+                      </div>
+                  
+                      <div class="d-flex justify-content-between align-items-center mt-1">
+                        <p class='text-danger' >si le stock est innexistant, veuillez le crée</p>
+                      </div>
+                  
+                  </div>
+
+
+                  <div class="form-floating mt-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput"><i class="bi bi-card-text"></i> Description</label>
+                  </div>
+
+                  <div class="border border-2 mt-2" style="padding:10px; border-radius:5px">
+                      <div class="form-floating mt-3">
+                          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="3">TAMO SIMO PIERE RENE</option>
+                              <option value="">option...</option>
+                          </select>
+                          <label for="floatingSelect"><i class="bi bi-boxes"></i> Fournisseurs*</label>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mt-1">
+                        <p class='text-danger' >si le fournisseur est innexistant, veuillez l'ajouté</p>
+                      </div>
+                  </div>
+
+
+                  <div class="form-floating mt-3">
+                      <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput"><i class="bi bi-123"></i> Qté*</label>
+                  </div>
+                
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success bg-success " style="color:white;"><i class="bi bi-save"></i> Enregistrer</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- raccourcis direct pour destocker un produit -->
+<div class="modal fade" id="retirer_produit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header bg-danger">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Retiré un article</h1>
+              <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-floating mt-3">
+                  <select class="form-select fw-bold" id="floatingSelect" aria-label="Floating label select example">
+                      <option value="3">C83E1</option>
+                      <option value="">C83E2</option>
+                  </select>
+                  <label for="floatingSelect"><i class="bi bi-tag"></i> Référence*</label>
+              </div>
+
+              <div class="form-floating mt-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option value="3">Lenovo 8iem G 128 4</option>
+                      <option value="">Lenovo 9iem G 128 4</option>
+                  </select>
+                  <label for="floatingSelect"><i class="bi bi-boxes"></i> Categorie x</label>
+              </div>
+          
+              
+
+              <div class="form-floating mt-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput"><i class="bi bi-123"></i> Qté*</label>
+                  <p class='text-danger' >Alerte sur la quantité de produit à retirer</p>
+              </div>
+            
+            </form>
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success bg-danger " style="color:white;"><i class="bi bi-save"></i> RETIRER</button>
+          </div>
+      </div>
   </div>
 </div>
