@@ -26,13 +26,13 @@
                         <a class="nav-link active" style="{{request()->routeIs('accueil') ? 'color:orangered':'color:white'}}" aria-current="page" href="{{request()->routeIs('accueil') ? '#' : route('accueil')}}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#section_fonctionalite" onclick="closeSidebar()" >Fonctionnalité</a>
+                        <a class="nav-link text-white" href="#section_fonctionalite"  >Fonctionnalité</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#section_tarif">Tarif</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{request()->routeIs('propos') ? '#' : route('propos')}} " style="{{request()->routeIs("propos") ? 'color:orangered':'color:white'}}">A propos</a>
+                        <a class="nav-link" href="{{request()->routeIs('propos') ? '#' : route('propos')}} " style="{{request()->routeIs('propos') ? 'color:orangered':'color:white'}}">A propos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{route('FAQ')}}"  >Centre d'aide</a>

@@ -7,45 +7,28 @@
 
          <!-- Fixed action buttons: Stocker / Destocker -->
         <div class="fixed-action-buttons" style="position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:1100;display:flex;flex-direction:column;gap:.6rem;">
-            <a href=""  data-bs-toggle="modal" data-bs-target="#add" data-bs-whatever="@getbootstrap" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+            <a href=""  data-bs-toggle="modal" data-bs-target="#enregistrer_produit" data-bs-whatever="@getbootstrap" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
                 <i class="bi bi-box-arrow-in-down fs-5" aria-hidden="true"></i>
                 <small style="font-size:10px;line-height:1;margin-top:2px;">Stocker</small>
                 
             </a>
             
-            <a href="" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+            <a href="" data-bs-toggle="modal" data-bs-target="#retirer_produit" data-bs-whatever="@getbootstrap" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
                 <i class="bi bi-box-arrow-up fs-5" aria-hidden="true"></i>
                 <small style="font-size:10px;line-height:1;margin-top:2px;">Destocker</small>
+            </a>
+
+            <a href="{{route('dashboard.stock_report')}}" class="btn  d-flex align-items-center justify-content-center flex-column" style="color:white;background: linear-gradient(90deg,#4b6f8a,#6e93a6);width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+                <i class="bi bi-file-earmark-text fs-5" aria-hidden="true"></i>
+                <small style="font-size:10px;line-height:1;margin-top:2px;">rapport</small>
             </a>
         </div>
 
         <div class="row">
             <div class="card mb-4">
                 <div class="card-header">
-                    <h3 class="text-muted">stock sortant</h3>
-                    {{-- <button type="button" class="btn btn-sm btn-danger float-end mx-3" data-bs-toggle="modal" data-bs-target="#vider"><i class="bi arrowclockwise"></i> vider</button> --}}
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#add" data-bs-whatever="@getbootstrap"  class="btn btn-sm btn-primary float-end col-12 mt-2  col-sm-3 "><i class="bi bi-folder-plus"></i> vider l'historique</button> 
-                    <!-- Modal renitialisation-->
-                    {{-- <div class="modal fade" id="vider" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background: rgba(255, 0, 0, 0.466)">
-                                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Rénitialisation de la liste</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" style="background: rgba(255, 0, 0, 0.062)">
-                                    <p class="text-danger fw-bold">Voulez-vous vraiment vider les données liées au vente ?<br>cette action est irréversible.</p>
-                                </div>
-                                <div class="modal-footer" style="background: rgba(255, 0, 0, 0.021)">
-                                    <button type="button" class="btn btn-outline" data-bs-dismiss="modal">fermer</button>
-                                    <button type="button" class="btn btn-danger">Accepter</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- end modal --}}
-
-                   
+                    <h2 class="fw-bold">Stock sortant</h2>
+                    <button type="button" class="btn  btn-danger float-end mx-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#vider_stock_sortant"><i class="bi arrowclockwise"></i> vider l'historique</button>                  
                     <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -125,9 +108,8 @@
                                     <td class="text-center"><span class="badge bg-danger date-badge">184</span></td>
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center gap-2 ventes-actions">
-                                            <a href="#" class="btn btn-outline-default btn-sm border" title="ouvrir le stock"><i class="bi bi-folder2-open"></i> ouvrir</a>
-                                            <a href="#" class="btn btn-outline-success btn-sm" title="Modifier"><i class="bi bi-pencil"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
+                                            <!-- <a href="#" class="btn btn-outline-default btn-sm border" title="ouvrir le stock"><i class="bi bi-folder2-open"></i> ouvrir</a> -->
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#supprimer_stock_sortant" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>

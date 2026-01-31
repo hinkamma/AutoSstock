@@ -29,6 +29,9 @@
         </div>
     </div>
 
+    {{-- Modals globaux --}}
+    @include('dashboard.base.logout_modal')
+
     <script>
       
     </script>

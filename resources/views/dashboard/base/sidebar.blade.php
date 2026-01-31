@@ -31,14 +31,20 @@
                     Fournisseurs    
                 </a>
                 
+                <a class="nav-link collapsed {{request()->routeIs('dashboard.commande entrant') ? 'active':''}}" href="{{route('dashboard.commande entrant')}}"  aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fa fa-download"></i></div>
+                    Stock entrant   
+                </a>
 
-                <a class="nav-link" href="{{route('dashboard.commande_entrant')}}"><i class="bi bi-arrow-return-right mx-2"></i> Entrants</a>
-                
-                <a class="nav-link" href="{{route('dashboard.commande_sortant')}}"><i class="bi bi-arrow-return-left mx-2"></i> Sortants</a>
-                
-                
-                <a class="nav-link collapsed " href="{{route('dashboard.fournisseur')}}"  aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="bi bi-question-circle"></i> FAQ / Aide</div>
+                  <a class="nav-link collapsed {{request()->routeIs('dashboard.commande sortant') ? 'active':''}}" href="{{route('dashboard.commande sortant')}}"  aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fa fa-upload"></i></div> 
+                    Stock sortant  
+                </a>
+
+
+                <a class="nav-link collapsed {{request()->routeIs('dashboard.support_aide') ? 'active':''}} " href="{{route('dashboard.support_aide')}}"  aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fa fa-arrown-down"></i></div>
+                    Guide manuel
                 </a>
                 
                     
@@ -52,15 +58,19 @@
             
         </div>
         <div class="container"><small><span class="fw-bold">V1.0</span> Copyright&copy;2025</small></div>
-        <div class="sb-sidenav-footer" style="background:rgba(240, 148, 148, 0.178)">
-            
-            <div class="small text-center"><i class="bi bi-box-arrow-left fs-3"></i> </div>
-            <div class="text-center">
-                <form action="{{route('traitment_Disconet')}}" method="post">
-                    @csrf  
-                    <button class="dropdown-item text-danger">Deconnexion</button>
-                </form>
+        <div class="sb-sidenav-footer p-3" style="background:linear-gradient(90deg, rgba(255,122,69,0.08), rgba(255,122,69,0.03)); border-radius:8px;">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <img src="{{ asset('banners/admin.jpeg') }}" alt="avatar" style="width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid rgba(0,0,0,0.06)">
+                <div class="flex-grow-1">
+                    <div class="fw-bold small">freddy roland</div>
+                    <div class="small text-muted">Super-admin</div>
+                </div>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-danger btn-sm rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#logoutConfirmModal"><i class="bi bi-box-arrow-left me-2"></i> Se déconnecter</button>
             </div>
         </div>
+
+
     </nav>
 </div>

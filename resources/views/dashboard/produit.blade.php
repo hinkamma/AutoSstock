@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     Tout Produits
-                    {{-- <button type="button" class="btn btn-sm btn-danger float-end mx-3" data-bs-toggle="modal" data-bs-target="#vider"><i class="bi arrowclockwise"></i> vider</button>
+                    <button type="button" class="btn btn-sm btn-danger float-end mx-3" data-bs-toggle="modal" data-bs-target="#vider"><i class="bi arrowclockwise"></i> vider</button>
                     <!-- Modal renitialisation-->
                     <div class="modal fade" id="vider" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -27,9 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
-                    {{-- end modal --}}
-
+                    </div>
                     
                 </div>
 

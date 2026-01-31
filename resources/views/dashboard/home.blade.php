@@ -24,6 +24,10 @@
                 <i class="bi bi-box-arrow-up fs-5" aria-hidden="true"></i>
                 <small style="font-size:10px;line-height:1;margin-top:2px;">Destocker</small>
             </a>
+            <a href="{{route('dashboard.stock_report')}}" class="btn  d-flex align-items-center justify-content-center flex-column" style="color:white;background: linear-gradient(90deg,#4b6f8a,#6e93a6);width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+                <i class="bi bi-file-earmark-text fs-5" aria-hidden="true"></i>
+                <small style="font-size:10px;line-height:1;margin-top:2px;">rapport</small>
+            </a>
         </div>
 
         <div class="row g-3 mt-4">
@@ -41,9 +45,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('dashboard.produit') }}" class="card-footer text-decoration-none" style="background:transparent;border-top:1px solid rgba(0,0,0,0.03);">
-                        Voir tous les produits <span class="float-end"><i class="bi bi-arrow-right"></i></span>
-                    </a>
                 </div>
             </div>
 
@@ -61,9 +62,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('dashboard.stock') }}" class="card-footer text-decoration-none" style="background:transparent;border-top:1px solid rgba(0,0,0,0.03);">
-                        Voir les alertes <span class="float-end"><i class="bi bi-arrow-right"></i></span>
-                    </a>
                 </div>
             </div>
 
@@ -82,9 +80,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('dashboard.liste_produit_entrant') }}" class="card-footer text-decoration-none" style="background:transparent;border-top:1px solid rgba(0,0,0,0.03);">
-                        Voir les entrées <span class="float-end"><i class="bi bi-arrow-right"></i></span>
-                    </a>
                 </div>
             </div>
 
@@ -103,9 +98,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('dashboard.liste_produit_sortant') }}" class="card-footer text-decoration-none" style="background:transparent;border-top:1px solid rgba(0,0,0,0.03);">
-                        Voir les sorties <span class="float-end"><i class="bi bi-arrow-right"></i></span>
-                    </a>
                 </div>
             </div>
 
@@ -148,7 +140,7 @@
                     <i class="bi bi-plus-square me-2"></i> Créer un stock vide
                 </a>
             </div>
-            <div class="col-md-4 mb-2">
+            <div class="col-md-4 mb-2 d-flex gap-2">
                 <a href="{{ route('dashboard.fournisseur') }}" class="btn btn-outline-info w-100 py-2">
                     <i class="bi bi-person-plus me-2"></i> Ajouter un fournisseur
                 </a>
@@ -164,12 +156,35 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="fw-semibold mb-1">Produits (total)</h6>
-                                <div class="small text-muted">Résumé des produits</div>
+                                <h6 class="fw-semibold mb-1">Recap stock</h6>
+                                <div class="small text-muted">Résumé des stocks</div>
                             </div>
                         </div>
-                        <div class="mt-3">
-                            <canvas id="chartTotalProducts" data-related="products" style="width:100%;height:140px;"></canvas>
+
+                        @php
+                            $sampleStocks = [
+                                ['name' => 'Ordinateur', 'total' => 184],
+                                ['name' => 'Tablette', 'total' => 92],
+                                ['name' => 'Téléphone', 'total' => 240],
+                            ];
+                        @endphp
+
+                        <ul class="list-unstyled mt-3 mb-0">
+                            @foreach($stocks ?? $sampleStocks as $s)
+                                <li class="d-flex justify-content-between align-items-center py-1">
+                                    <div>
+                                        <strong>{{ $s['name'] ?? $s->name ?? 'Stock' }}</strong>
+                                        <div class="small text-muted">Catégorie: {{ $s['category'] ?? '—' }}</div>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-primary">{{ $s['total'] ?? $s->total ?? 0 }}</span>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+
+                        <div class="mt-3 text-end">
+                            <a href="#" class="btn btn-sm btn-outline-light" style="color:#6c757d">Voir plus</a>
                         </div>
                     </div>
                 </div>
@@ -180,9 +195,30 @@
                     <div class="card-body">
                         <h6 class="fw-semibold mb-1">Produits faibles en stock</h6>
                         <div class="small text-muted">Alertes de stock</div>
-                        <div class="mt-3">
-                            <canvas id="chartLowStock" data-related="lowstock" style="width:100%;height:140px;"></canvas>
+
+                        @php
+                            $sampleLow = [
+                                ['ref'=>'C83E1','name'=>'Lenovo 8iem G','category'=>'Ordinateur','qte'=>2],
+                                ['ref'=>'T11X','name'=>'Samsung Tab A','category'=>'Tablette','qte'=>1],
+                                ['ref'=>'P44Z','name'=>'iPhone SE','category'=>'Téléphone','qte'=>3],
+                            ];
+                        @endphp
+
+                        <div class="list-group mt-3">
+                            @foreach($lowStockProducts ?? $sampleLow as $p)
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-bold">{{ $p['name'] ?? $p->name }}</div>
+                                        <div class="small text-muted">{{ $p['category'] ?? $p->category }} • Réf: {{ $p['ref'] ?? $p->ref }}</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="mb-2"><span class="badge bg-warning text-dark">{{ $p['qte'] ?? $p->qte }}</span></div>
+                                        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#restockModal" data-ref="{{ $p['ref'] ?? $p->ref }}" data-name="{{ $p['name'] ?? $p->name }}">Ravitailler</button>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -191,10 +227,27 @@
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h6 class="fw-semibold mb-1">Entrées récentes</h6>
-                        <div class="small text-muted">Produits ajoutés récemment</div>
-                        <div class="mt-3">
-                            <canvas id="chartEntries" data-related="entries" style="width:100%;height:140px;"></canvas>
-                        </div>
+                        <div class="small text-muted">Produits ajoutés aujourd'hui</div>
+
+                        @php
+                            $sampleEntries = [
+                                ['ref'=>'C356-01','name'=>'Lenovo 8iem G','time'=>'2026-01-31 09:12'],
+                                ['ref'=>'T11-09','name'=>'Samsung Tab A','time'=>'2026-01-31 10:45'],
+                            ];
+                        @endphp
+
+                        <ul class="list-unstyled mt-3">
+                            @foreach($recentEntries ?? $sampleEntries as $e)
+                                <li class="py-2 border-bottom d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-bold">{{ $e['name'] ?? $e->name }}</div>
+                                        <div class="small text-muted">Réf: {{ $e['ref'] ?? $e->ref }}</div>
+                                    </div>
+                                    <div class="small text-muted">{{ $e['time'] ?? $e->time }}</div>
+                                </li>
+                            @endforeach
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -204,9 +257,26 @@
                     <div class="card-body">
                         <h6 class="fw-semibold mb-1">Sorties récentes</h6>
                         <div class="small text-muted">Produits sortis récemment</div>
-                        <div class="mt-3">
-                            <canvas id="chartExits" data-related="exits" style="width:100%;height:140px;"></canvas>
-                        </div>
+
+                        @php
+                            $sampleExits = [
+                                ['ref'=>'C356-03','name'=>'HP Envy','time'=>'2026-01-31 11:05'],
+                                ['ref'=>'P44Z','name'=>'iPhone SE','time'=>'2026-01-31 12:30'],
+                            ];
+                        @endphp
+
+                        <ul class="list-unstyled mt-3">
+                            @foreach($recentExits ?? $sampleExits as $ex)
+                                <li class="py-2 border-bottom d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-bold">{{ $ex['name'] ?? $ex->name }}</div>
+                                        <div class="small text-muted">Réf: {{ $ex['ref'] ?? $ex->ref }}</div>
+                                    </div>
+                                    <div class="small text-muted">{{ $ex['time'] ?? $ex->time }}</div>
+                                </li>
+                            @endforeach
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -217,10 +287,93 @@
                     <div class="card-body">
                         <h6 class="fw-semibold mb-2">Statistiques globales (graphique)</h6>
                         <div class="small text-muted mb-3">Graphique récapitulatif (ventes, valeur stock, rotation)</div>
-                        <canvas id="chartGlobalStats" data-related="global" style="width:100%;height:220px;"></canvas>
+                        <div>
+                            <canvas id="globalStatsChart" style="width:100%;height:260px;"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Restock Modal -->
+            <div class="modal fade" id="restockModal" tabindex="-1" aria-labelledby="restockModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-success text-light">
+                    <h5 class="modal-title" id="restockModalLabel">Ravitailler le produit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="restockForm">
+                        <div class="mb-2">
+                            <label class="form-label">Produit</label>
+                            <input type="text" id="restock-name" class="form-control" readonly>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Référence</label>
+                            <input type="text" id="restock-ref" class="form-control" readonly>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Quantité à ajouter</label>
+                            <input type="number" id="restock-qte" class="form-control" min="1" value="1">
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-success" id="restockSubmitBtn">Ravitailler</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    // Restock modal prefill
+                    var restockModal = document.getElementById('restockModal');
+                    if(restockModal){
+                        restockModal.addEventListener('show.bs.modal', function(e){
+                            var button = e.relatedTarget;
+                            var ref = button.getAttribute('data-ref') || '';
+                            var name = button.getAttribute('data-name') || '';
+                            document.getElementById('restock-ref').value = ref;
+                            document.getElementById('restock-name').value = name;
+                        });
+                    }
+
+                    document.getElementById('restockSubmitBtn')?.addEventListener('click', function(){
+                        var qte = parseInt(document.getElementById('restock-qte').value || 0,10);
+                        if(qte <= 0) return alert('Quantité invalide');
+                        // TODO: AJAX call to backend to perform restock
+                        this.textContent = 'Ravitaillage...';
+                        setTimeout(()=>{ this.textContent='Ravitailler'; document.querySelector('#restockModal .btn-close').click(); },800);
+                    });
+
+                    // Chart placeholders using Chart.js (data will be provided by backend)
+                    function initChart(ctx, labels, dataSets){
+                        if(typeof Chart === 'undefined') return;
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: { labels: labels, datasets: dataSets },
+                            options: { responsive:true, maintainAspectRatio:false }
+                        });
+                    }
+
+                    // Small chart for total products (sample)
+                    var ctxSmall = document.getElementById('chartTotalProducts');
+                    if(ctxSmall){
+                        initChart(ctxSmall, ['Ordinateur','Tablette','Téléphone'], [{label:'Total produits', backgroundColor:['#007bff','#6f42c1','#17a2b8'], data:[184,92,240]}]);
+                    }
+
+                    // Global stats chart (sample)
+                    var ctxGlobal = document.getElementById('globalStatsChart');
+                    if(ctxGlobal){
+                        initChart(ctxGlobal, ['Jan','Fév','Mar','Avr','Mai','Juin'], [
+                            {label:'Ventes', backgroundColor:'#ff7a45', data:[120,150,170,140,190,210]},
+                            {label:'Valeur stock', backgroundColor:'#6e93a6', data:[200,180,210,230,220,240]}
+                        ]);
+                    }
+                });
+            </script>
         </div>
 
         

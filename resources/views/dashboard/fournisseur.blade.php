@@ -7,8 +7,7 @@
         <div class="row">
             <div class="card mb-4">
                 <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    Liste des fournisseurs
+                    <h2 class="fw-bold">Liste fournisseur</h2>
                     <button type="button" data-bs-toggle="modal" data-bs-target="#add" data-bs-whatever="@getbootstrap"  class="btn btn-sm btn-primary float-end col-12 mt-2 col-sm-3 "><i class="bi bi-person-vcard-fill"></i> Ajouter</button> 
                     <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -55,11 +54,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Modal renitialisation-->
-                    <!-- <div class="modal fade" id="vider" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background: rgba(255, 0, 0, 0.466)">
+                      
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: rgba(255, 0, 0, 0.466)">
+                                <!-- Modal renitialisation-->
+                                <!-- <div class="modal fade" id="vider" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">   
                                     <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Rénitialisation de la liste</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
@@ -73,9 +73,7 @@
                             </div>
                         </div>
                     </div> --}}
-                    {{-- end modal --}} -->
-
-                    
+                    {{-- end modal --}} -->    
                 </div>
 
                 <div class="card-body">
@@ -130,13 +128,12 @@
                                     <td class="text-center"><span class="badge bg-primary qty-badge">4509</span></td>
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center gap-2 fournisseurs-actions">
-                                            <a href="#" class="btn btn-default border btn-sm fw-bold" title="Voir"><i class='bi bi-clock-history'></i> Historique</a>
-                                            <a href="#" class="btn btn-outline-success btn-sm" title="Modifier"><i class="bi bi-pencil"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
+                                            <a href="{{ route('dashboard.fournisseur_historique') }}" class="btn btn-default border btn-sm fw-bold" title="Voir"><i class='bi bi-clock-history'></i> Historique</a>
+                                            <a data-bs-toggle="modal" data-bs-target="#modifierItemFournisseur" data-bs-whatever="@mdo" href="#" class="btn btn-outline-success btn-sm" title="Modifier"><i class="bi bi-pencil"></i></a>
+                                            <a data-bs-toggle="modal" data-bs-target="#supprimerItemFournisseur" data-bs-whatever="@mdo" href="#" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>

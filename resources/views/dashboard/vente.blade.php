@@ -5,24 +5,30 @@
 @section('content_dashboard')
     <div class="container mt-4">
 
-     <!-- Fixed action buttons: Stocker / Destocker -->
-    <div class="fixed-action-buttons" style="position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:1100;display:flex;flex-direction:column;gap:.6rem;">
-        <a href=""  data-bs-toggle="modal" data-bs-target="#add" data-bs-whatever="@getbootstrap" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
-            <i class="bi bi-box-arrow-in-down fs-5" aria-hidden="true"></i>
-            <small style="font-size:10px;line-height:1;margin-top:2px;">Stocker</small>
+        <!-- Fixed action buttons: Stocker / Destocker -->
+        <div class="fixed-action-buttons" style="position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:1100;display:flex;flex-direction:column;gap:.6rem;">
+            <a href=""  data-bs-toggle="modal" data-bs-target="#enregistrer_produit" data-bs-whatever="@getbootstrap" class="btn btn-success d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+                <i class="bi bi-box-arrow-in-down fs-5" aria-hidden="true"></i>
+                <small style="font-size:10px;line-height:1;margin-top:2px;">Stocker</small>
+                
+            </a>
             
-        </a>
-        
-        <a href="" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
-            <i class="bi bi-box-arrow-up fs-5" aria-hidden="true"></i>
-            <small style="font-size:10px;line-height:1;margin-top:2px;">Destocker</small>
-        </a>
-    </div>
+            <a data-bs-toggle="modal" data-bs-target="#retirer_produit" data-bs-whatever="@getbootstrap"href="" class="btn btn-danger d-flex align-items-center justify-content-center flex-column" style="width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+                <i class="bi bi-box-arrow-up fs-5" aria-hidden="true"></i>
+                <small style="font-size:10px;line-height:1;margin-top:2px;">Destocker</small>
+            </a>
+
+            <a href="{{route('dashboard.stock_report')}}" class="btn  d-flex align-items-center justify-content-center flex-column" style="color:white;background: linear-gradient(90deg,#4b6f8a,#6e93a6);width:56px;height:56px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+                <i class="bi bi-file-earmark-text fs-5" aria-hidden="true"></i>
+                <small style="font-size:10px;line-height:1;margin-top:2px;">rapport</small>
+            </a>
+        </div>
 
         <div class="row">
-            <div class="card mb-4">
+            <div class="card mb-4 ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat libero, pariatur eaque asperiores, reiciendis iure placeat ducimus quas modi itaque, molestiae quasi reprehenderit tenetur odio vel rem deleniti. Aliquam, quae?
                 <div class="card-header">
-                    <h3 class="text-muted">Historique des produits Entrant</h3> 
+                    <h2 class="fw-bold">Historique produit</h2>
                 </div>
 
                 <div class="card-body">
@@ -75,8 +81,8 @@
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center gap-2 ventes-actions">
                                             <!-- <a href="#" class="btn btn-outline-primary btn-sm" title="Voir"><i class="bi bi-eye"></i></a> -->
-                                            <a href="#" class="btn btn-outline-success btn-sm" title="Modifier"><i class="bi bi-pencil"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
+                                            <a data-bs-toggle="modal" data-bs-target="#modifier_produit" data-bs-whatever="@getbootstrap" href="#" class="btn btn-outline-success btn-sm" title="Modifier"><i class="bi bi-pencil"></i></a>
+                                            <a  data-bs-toggle="modal" data-bs-target="#supprimerItemProduit" data-bs-whatever="@getbootstrap" href="#" class="btn btn-outline-danger btn-sm" title="Supprimer"><i class="bi bi-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>

@@ -1,130 +1,43 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark shadow-lg text-dark" style="background:white">
   <!-- Navbar Brand-->
-  <a class="navbar-brand ps-3 text-dark" href="index.html"><span class="fw-bold" style="color:orangered">Auto</span>Stock</a>
-  <!-- Sidebar Toggle-->
-  <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 text-dark " id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-  <!-- Navbar Search-->
-  <form class="d-none d-md-inline-block form-inline ">
-      <div class="input-group">
-          <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-              <button class="btn text-dark " id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-      </div>
-
-
-  </form>
+    <a class="navbar-brand ps-3 text-dark" href="index.html"><span class="fw-bold" style="color:orangered">Auto</span>Stock</a>
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 text-dark " id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn text-dark " id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
   <!-- Task  manager -->
-  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 text-dark" >
-      <li class="nav-item dropdown bg-light rounded-2">
-          <a class="text-dark nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-sliders2"></i></a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="navbarDropdown" >
-              <li><a class="dropdown-item" href="{{route('dashboard.manager.gerer')}}"><i class="bi-person-fill-lock"></i> Gérer </a></li>
-              <li><a class="dropdown-item" href="{{route('dashboard.manager.activite')}}"><i class="bi bi-activity"></i> Activités</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <form action="{{route('traitment_Disconet')}}" method="post">
-                  @csrf  
-                  <button class="dropdown-item text-danger"><i class="bi bi-box-arrow-left"></i> Deconnexion</button>
-                </form>
-              </li>
-
-                
-          </ul>
-      </li>
-  </ul>
-
-
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 text-dark" >
+        <li class="nav-item dropdown bg-light rounded-2">
+            <a class="text-dark nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-sliders2"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="navbarDropdown" >
+                <li><a class="dropdown-item" href="{{route('dashboard.manager.gerer')}}"><i class="bi-person-fill-lock"></i> Gérer </a></li>
+                <li><a class="dropdown-item" href="{{route('dashboard.manager.activite')}}"><i class="bi bi-activity"></i> Activités</a></li>
+                <li><hr class="dropdown-divider" /></li>    
+            </ul>
+        </li>
+    </ul>
     
-  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 text-light" >
-      <li class="nav-item dropdown bg-light rounded-2">
-          <a class="text-dark nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell fa-fw"></i> <span class="badge badge-danger badge-counter" style="background:rgba(207, 48, 20, 0.863);font-size:10px;position:relative;right:15px;bottom:8px">3+</span></a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-lg bg-dark" aria-labelledby="navbarDropdown"  >
-              <li class='container fw-bold' style="color:orangered">Notifications</li>
-              <hr class="dropdown-divider" style="background-color:rgba(255, 68, 0, 0.452)" />
-              <li><a class="dropdown-item text-light" href="#!"><i class="bi-bell"></i> Notification 1</a></li>
-              <li><hr class="dropdown-divider bg-light text-light" /></li>
-              <li><a class="dropdown-item text-light" href="#!">Voir toutes <i class="bi bi-chevron-right"></i></a></li>
-          </UL>
-      </li>
-  </ul>
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 " >
+        <li class="nav-item dropdown  ">
+            <a class="text-dark nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell fa-fw"></i> <span class="badge badge-danger badge-counter" style="background:rgba(207, 48, 20, 0.863);font-size:10px;position:relative;right:15px;bottom:8px">1+</span></a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg  " aria-labelledby="navbarDropdown"  >
+                <li><a class="dropdown-item " href="{{route('dashboard.notifications')}}" style="color:red"><i class="bi-bell"></i> stock ordinateur en bai...</a></li>
+            </ul>
+        </li>
+    </ul>
 
-  
-   
-
-  {{-- profil --}}
-    {{-- welcome + profil --}}
-    <div class="d-none d-md-flex align-items-center me-3">
+    <div class="d-none d-md-flex align-items-center ms-auto">
       <div class="px-3 py-1 rounded" style="background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04);">
         <div class="small text-muted" style="line-height:1">Bienvenue,</div>
         <div class="fw-bold" style="font-size:0.95rem">freddy roland</div>
       </div>
     </div>
-
-    <div class="ms-auto mx-4" style="background;width: 30px;height: 30px; "> 
-      <a style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="border-radius:1000px;border:none">
-        <img src="{{asset('banners/admin.jpeg')}}" width="100%" height="100%" alt="" style="border-radius:1000px" title="{{ auth()->user()->name ?? 'Profil' }}">
-      </a>
-    </div>
-
-    
-
 </nav>
-
-<!-- boite de dialogue de la session compte de l'utilisateur -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header text-light" style="background:orangered">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Mon compte</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-            <div class="container">
-                <div style="width:200px;height:200px;background-size:cover;background-position:center" class="mx-auto mb-3">
-                    <img src="{{asset('banners/admin.jpeg')}}" width="100%" height="100%" alt="" style="border-radius:1000px" title="freddy roland">
-                </div>
-            </div>
-          <div class="mb-1">
-            <label for="recipient-name" class="col-form-label">Noms</label>
-            <input type="text" class="form-control fw-bold" id="recipient-name" value="nom_Admin">
-          </div>
-
-          <div class="mb-1">
-            <label for="recipient-name" class="col-form-label">Prenoms</label>
-            <input type="text" class="form-control fw-bold" id="recipient-name" value="prenom_Admin">
-          </div>
-
-          <div class="mb-1">
-            <label for="recipient-name" class="col-form-label">E-mail</label>
-            <input type="text" class="form-control fw-bold" id="recipient-name" value="email_Admin">
-          </div>
-
-          <div class="mb-1">
-            <label for="recipient-name" class="col-form-label">Mot de passe</label>
-            <input type="text" class="form-control fw-bold" id="recipient-name" value="motdepasse_Admin">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer" style='background:rgba(255, 68, 0, 0.062)'>
-        <button type="button" 
-                class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold"
-                style="border:1.5px solid orangered; color:orangered; transition:background 0.2s, color 0.2s;"
-                data-bs-dismiss="modal"
-                onmouseover="this.style.background='orangered';this.style.color='white';"
-                onmouseout="this.style.background='';this.style.color='orangered';">
-            Fermer
-        </button>
-        <button type="button" 
-                class="btn rounded-pill px-4 py-2 fw-bold text-light"
-                style="background:orangered; border:none; box-shadow:0 2px 8px rgba(255,68,0,0.15); transition:background 0.2s;"
-                onmouseover="this.style.background='#cf3014';"
-                onmouseout="this.style.background='orangered';">
-            Enregistrer
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <div class="modal fade" id="raccourcis_stock_vide" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -225,6 +138,60 @@
   </div>
 </div>
 
+<!-- Modifier un produit -->
+<div class="modal fade" id="modifier_produit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header bg-success">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Produit / Article</h1>
+              <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-floating mb-3 ">
+                      <input type="text" value="C83E1" class="form-control cursor-none fw-bold" id="floatingInput" placeholder="name@example.com"  >
+                      <label for="floatingInput"><i class="bi bi-tag"></i> Référence Ref</label>
+                  </div>
+                  <div class="form-floating mb-3 ">
+                      <input type="text" value="PC Lenovo Core i5"  class="form-control" id="floatingInput" placeholder="name@example.com" >
+                      <label for="floatingInput"><i class="bi bi-box"></i> Article*</label>
+                  </div>
+                  
+
+                    <div class="border border-2" style="padding:10px; border-radius:5px">
+                      <div class="form-floating mt-3">
+                          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="3">Tablette</option>
+                              <option value="">Autres...</option>
+                          </select>
+                          <label for="floatingSelect"><i class="bi bi-boxes"></i> Catégorie*</label>
+                      </div>
+                  </div>
+
+
+                    <div class="form-floating mt-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput"><i class="bi bi-card-text"></i> Description</label>
+                    </div>
+
+                    <div class="border border-2 mt-2" style="padding:10px; border-radius:5px">
+                      <div class="form-floating mt-3">
+                          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="3">TAMO SIMO PIERE RENE</option>
+                              <option value="">option...</option>
+                          </select>
+                          <label for="floatingSelect"><i class="bi bi-boxes"></i> Fournisseurs*</label>
+                      </div>
+                    </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success bg-success " style="color:white;"><i class="bi bi-save"></i> Modifier</button>
+          </div>
+      </div>
+  </div>
+</div>
+
 <!-- raccourcis direct pour destocker un produit -->
 <div class="modal fade" id="retirer_produit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -267,4 +234,147 @@
           </div>
       </div>
   </div>
+</div>
+
+
+<!-- boite de dialogue pour supprimer un fournisseur -->
+<div class="modal fade" id="supprimerItemFournisseur" tabindex="-1" aria-labelledby="deleteStockLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title" id="deleteStockLabel">Supprimer <strong id="delete-stock-ref">Hinkamma</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger fw-bold">Voulez-vous vraiment supprimer ce fournisseur  ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- boite de dialogue pour supprimer un produit -->
+<div class="modal fade" id="supprimerItemProduit" tabindex="-1" aria-labelledby="deleteStockLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title" id="deleteStockLabel">Suppression de C356R</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger fw-bold">Voulez-vous vraiment supprimer ce produit  ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- boite de dialogue pour supprimer un stock sortant -->
+<div class="modal fade" id="supprimer_stock_sortant" tabindex="-1" aria-labelledby="deleteStockLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title" id="deleteStockLabel">Suppression definitive</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger fw-bold">Voulez-vous vraiment supprimer ce stock  ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- boite de dialogue pour vider le stock sortant -->
+<div class="modal fade" id="vider_stock_sortant" tabindex="-1" aria-labelledby="deleteStockLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title" id="deleteStockLabel">Suppression definitive</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger fw-bold"><i class="bi bi-warning"></i> Voulez-vous vraiment vider l'historique de stock sortant ?</p>
+                <p>cette action est irreverible et supprimera toutes les données du stock</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!-- pour modifier un item de produit -->
+<div class="modal fade" id="modifierItemFournisseur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header bg-success">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Modifier le fournisseur</h1>
+              <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="">
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body text-center">
+                        <img src="{{ asset('banners/admin.jpeg') }}" alt="logo" class="mb-3" style="width:100px;height:100px;border-radius:12px;object-fit:cover">
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="mt-3">
+                    <label for="">Nom d'utilisateur</label>
+                  <input type="text" class="form-control" id="floatingInput"  value='freddy roland hinkamma'>
+                </div>
+
+                <div class="mt-3">
+                    <label for="">Adresse</label>
+                  <input type="text" class="form-control" id="floatingInput" value="Douala">
+                </div>
+
+                <div class="mt-3">
+                    <label for="">Tel</label>
+                  <input type="text" class="form-control" id="floatingInput" value="682890741">
+                </div>
+            
+            </form>
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success bg-success " style="color:white;"> MODIFIER</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- boite de dialogue pour supprimer un item de stock entrant-->
+<div class="modal fade" id="deleteStockItemEntrant" tabindex="-1" aria-labelledby="deleteStockLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title" id="deleteStockLabel">Supprimer <strong id="delete-stock-ref">C356R</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger fw-bold">Voulez-vous vraiment supprimer ce stock  ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\UtilisateurController;
 
+Route::get('/dashboard/historique_fournisseur', function () {
+    return view('dashboard.fournisseur_historique');
+})->middleware("obligation_connexion")->name('dashboard.fournisseur_historique');
+
 Route::get('/dashboard/user-events/{$id}', function () {
     return view('dashboard.user-events');
 })->middleware("auth")->name('dashboard.user-events');
@@ -149,3 +153,33 @@ Route::get('/dashboard/manager/activite', function () {
 })->middleware("obligation_connexion")->name('dashboard.manager.activite');
 
 
+Route::get('/dashboard/historique_fournisseur', function () {
+    return view('dashboard.fournisseur_historique');
+})->middleware("obligation_connexion")->name('dashboard.fournisseur_historique');
+
+
+
+Route::get('/dashboard/produit_stock_entrant', function () {
+    return view('dashboard.produit_stock_entrant');
+})->middleware("obligation_connexion")->name('dashboard.produit_stock_entrant');
+
+
+Route::get('/dashboard/Guide manuel', function () {
+    return view('dashboard.support_aide');
+})->middleware("obligation_connexion")->name('dashboard.support_aide');
+
+Route::get('/dashboard/Commande entrante', function () {
+    return view('dashboard.commande entrant');
+})->middleware("obligation_connexion")->name('dashboard.commande entrant');
+
+Route::get('/dashboard/Commande sortante', function () {
+    return view('dashboard.commande sortant');
+})->middleware("obligation_connexion")->name('dashboard.commande sortant');
+
+Route::get('/dashboard/rapport', function () {
+    return view('dashboard.stock_report');
+})->middleware("obligation_connexion")->name('dashboard.stock_report');
+
+Route::get('/dashboard/notifications', function () {
+    return view('dashboard.notifications');
+})->middleware("obligation_connexion")->name('dashboard.notifications');
